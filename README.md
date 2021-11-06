@@ -13,8 +13,9 @@ If we want to include a new signature template in the future, follow these steps
     "homepage": "https://yourdomain.com"
 2. If the React app involves frontend routing, add a .htaccess file and include the following line:
     FallbackResource ./index.html
-3. run "npm run build" to build the React app
-4. upload each file from the build folder into the domain's Document Root folder
+3. Also in the .htaccess file add lines following this document: https://cc.bingj.com/cache.aspx?q=react+app+bluehost&d=4729540940990033&mkt=en-CA&setlang=en-CA&w=5VrPQPcpmlxmvx7Z5yONaDvo-3ua1hGN so that this app can be host on Bluehost
+4. run "npm run build" to build the React app
+5. upload each file from the build folder into the domain's Document Root folder
 
 Reference webpage: https://codeburst.io/deploying-and-hosting-a-react-app-on-an-apache-server-b7121dffb07a
 
