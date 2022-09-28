@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Input, Button } from 'antd';
-import { Layout, Row, Col } from "antd";
+import {  Row, Col } from "antd";
 import ShortSignature from './shortsignature';
 
 const ShortContent = () => {

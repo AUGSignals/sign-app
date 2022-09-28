@@ -1,4 +1,4 @@
-import { Layout, Row, Col } from "antd";
+import { Layout } from "antd";
 import React from "react";
 import FullContent from "./fullcontent";
 
