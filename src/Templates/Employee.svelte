@@ -60,6 +60,7 @@
  
  <style>
   .content{
+    top:20px;
     display:grid;
     width:280px;
     align-items:center;

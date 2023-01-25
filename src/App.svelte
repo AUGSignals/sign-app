@@ -1,11 +1,11 @@
 <script>
- 
-  import Employee from "./Templates/Employee.svelte";
-  import AUGDefault from "./Templates/Default/AUGDefault.svelte";
+  
+  import AirSENCEShort from "./Templates/AirSENCEShort/AirSENCE Short.svelte";
+
 
 </script>
-<Employee/>
-<AUGDefault/> 
+
+<AirSENCEShort/> 
 <main>
 
   
