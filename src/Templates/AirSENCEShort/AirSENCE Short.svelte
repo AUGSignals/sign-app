@@ -1,9 +1,8 @@
 <script>
- 
- 
  let message;
+ import Employee from "../Employee.svelte";
 </script>
-    
+<Employee/>    
     
     <img src= {"https://augsignals.com/wp-content/uploads/logo/aug-logo-200x110.jpg"} alt="auglogo"  height="90px" width="130px"/>   
     <div class= " flex-grid">

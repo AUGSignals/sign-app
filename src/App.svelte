@@ -1,11 +1,11 @@
 <script>
   
-  import AirSENCEShort from "./Templates/AirSENCEShort/AirSENCE Short.svelte";
+  import AUGDefault from "./Templates/Default/AUGDefault.svelte";
 
 
 </script>
 
-<AirSENCEShort/> 
+<AUGDefault/> 
 <main>
 
   
