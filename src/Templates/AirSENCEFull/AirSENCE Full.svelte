@@ -2,9 +2,7 @@
     import Employee from "../Employee.svelte";
     import Clipboard from "svelte-clipboard"; 
     import { writable} from 'svelte/store';
-    import {copy} from "svelte-clipboard";
-
-    export const user = writable({
+      const user = writable({
       fullname: { },
       designation:{ },
       extension:{ },
@@ -13,7 +11,7 @@
     
 </script>
 <Employee/>       
-  <!--  <img src= https://augsignals.com/wp-content/uploads/logo/aug-logo-200x110.jpg alt='auglogo' height='67px' width='60px'/>   
+   <img src= https://augsignals.com/wp-content/uploads/logo/aug-logo-200x110.jpg alt='auglogo' height='67px' width='60px'/>   
       <div class='flex-grid'>
           <h3>
               Canada Address
@@ -32,15 +30,15 @@
       <p>
         NOTICE: Confidential message which may be privileged. Unauthorized use/disclosure prohibited. If received in error, please notify the sender immediately and delete all copies and attachments.
     </p>
-    </div> -->
+    </div> 
     <!-- copied text to clipboard-->
-     <Clipboard>
+     <Clipboard
       text= "<div class='emp-info'>
         <p>{user.fullname}</p>
         <p>{user.designation}</p>
         <p>Office:+1 416 923 4425 ext.{user.extension}</p>
         <p>Fax: +1 877 756 4628</p>
-        <p>Email:<a href="mailto:`email`?subject=subject& body= body">{user.email}</a></p>
+        <p>Email:<a href='mailto:`email`?subject=subject& body=body'>{user.email}</a></p>
         <a href='https://airsence.com/'>https://airsence.com/</a> 
           </div>
          <div class = 'flex-grid'>
@@ -94,9 +92,6 @@
      
   
   </style>
-
-
-
 
 
 

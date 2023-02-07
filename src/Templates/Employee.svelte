@@ -10,7 +10,20 @@
     });
     
  import { LinkedinBrand, FacebookBrand,TwitterBrand, YoutubeBrand} from "svelte-awesome-icons";
- 
+ function myFunction() {
+  // Get the text field
+  var submit = document.getElementById("myInput");
+
+  // Select the text field
+  submit.select();
+  submit.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(submit.value);
+  
+  // Alert the copied text
+  alert("Copied the text: " + submit.value);
+}
 </script>
 <slot>
 </slot>
@@ -19,19 +32,19 @@
   <form class ="content">
    
       <label for="text">Full Name</label>
-      <input  placeholder="Enter Full name" bind:value={user.fullname} required="true"/>
+      <input  placeholder="Enter Full name" id="myInput" bind:value={user.fullname} required="true"/>
    
       <label for="text">Designation</label>
-      <input placeholder="Enter Designation" bind:value={user.designation} required="true" />
+      <input placeholder="Enter Designation" id="myInput" bind:value={user.designation} required="true" />
     
       <label for="text">Extension</label>
-      <input placeholder="Enter Extension" bind:value={user.extension} required="true"/>
+      <input placeholder="Enter Extension" id="myInput" bind:value={user.extension} required="true"/>
     
       <label for="text">Email</label>
-      <input placeholder="Enter Email" bind:value={user.email} required="true"/>
+      <input placeholder="Enter Email" id="myInput" bind:value={user.email} required="true"/>
     
     
-    <button type="submit" >submit</button>
+    <button onclick = "myFunction()">submit</button>
  
   
   </form>
@@ -93,5 +106,4 @@
     
   }
 </style>
-
 

@@ -30,13 +30,13 @@
 </script>
 <Employee/>
  
-<Clipboard>
+<Clipboard
     text = "<div class ='emp-info'>
       <p>{user.fullname}</p>
       <p>{user.designation}</p>
       <p>Office:+1 416 923 4425 ext.{user.extension}</p>
       <p>Fax: +1 877 756 4628</p>
-      <p>Email: "<a href='mailto:`email`?subject=subject& body=body">{user.email}</a></p>
+      <p>Email: <a href="mailto:`email`?subject=subject&body=body">{user.email}</a></p>
       <a href="https://augsignals.com/">https://augsignals.com/</a>  
       </div>
       <div class = 'footer'>
