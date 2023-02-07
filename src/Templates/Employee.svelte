@@ -11,7 +11,6 @@
     
  import { LinkedinBrand, FacebookBrand,TwitterBrand, YoutubeBrand} from "svelte-awesome-icons";
  
-
 </script>
 <slot>
 </slot>
@@ -32,7 +31,7 @@
       <input placeholder="Enter Email" bind:value={user.email} required="true"/>
     
     
-    <button type="primary">submit</button>
+    <button type="submit" >submit</button>
  
   
   </form>
@@ -94,6 +93,5 @@
     
   }
 </style>
-
 
 
