@@ -1,11 +1,11 @@
 <script>
   
-  import AUGDefault from "./Templates/Default/AUGDefault.svelte";
+  import AirSENCEFull from "./Templates/AirSENCEFull/AirSENCE Full.svelte";
 
 
 </script>
 
-<AUGDefault/> 
+<AirSENCEFull/> 
 <main>
 
   

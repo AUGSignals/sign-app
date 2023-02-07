@@ -16,5 +16,5 @@ In future if you want to include a new signature template , follow below steps:
 4. run "npm run dev" to build the React app
 5. upload each file from the build folder into the domain's Document Root folder
 
-Reference webpage: https://codeburst.io/deploying-and-hosting-a-react-app-on-an-apache-server-b7121dffb07a
+
 
