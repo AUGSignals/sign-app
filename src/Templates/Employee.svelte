@@ -1,56 +1,44 @@
 
 <script>
- import { writable } from 'svelte/store';
- 
- export const user = writable({
+  
+    import { writable} from 'svelte/store';
+      const user = writable({
       fullname: { },
       designation:{ },
       extension:{ },
       email: { }
     });
+   
     
  import { LinkedinBrand, FacebookBrand,TwitterBrand, YoutubeBrand} from "svelte-awesome-icons";
- function myFunction() {
-  // Get the text field
-  var submit = document.getElementById("myInput");
-
-  // Select the text field
-  submit.select();
-  submit.setSelectionRange(0, 99999); // For mobile devices
-
-  // Copy the text inside the text field
-  navigator.clipboard.writeText(submit.value);
-  
-  // Alert the copied text
-  alert("Copied the text: " + submit.value);
-}
+ 
 </script>
 <slot>
 </slot>
-  
+ 
  
   <form class ="content">
    
       <label for="text">Full Name</label>
-      <input  placeholder="Enter Full name" id="myInput" bind:value={user.fullname} required="true"/>
+      <input  placeholder="Enter Full name" id="fullname" bind:value={user.fullname} required="true"/>
    
       <label for="text">Designation</label>
-      <input placeholder="Enter Designation" id="myInput" bind:value={user.designation} required="true" />
+      <input placeholder="Enter Designation" id="designation" bind:value={user.designation} required="true" />
     
       <label for="text">Extension</label>
-      <input placeholder="Enter Extension" id="myInput" bind:value={user.extension} required="true"/>
+      <input placeholder="Enter Extension"  id="extension" bind:value={user.extension} required="true"/>
     
       <label for="text">Email</label>
-      <input placeholder="Enter Email" id="myInput" bind:value={user.email} required="true"/>
+      <input placeholder="Enter Email" id= "email" bind:value={user.email} required="true"/>
     
     
-    <button onclick = "myFunction()">submit</button>
+    <button>submit</button>
  
   
   </form>
-  <div class="emp-info">
-    <p>{user.fullname}</p>
-    <p>{user.designation}</p>
+  <div class='empinfo'>
+    <p><strong>{user.fullname}</strong></p>
+    <p><strong>{user.designation}</strong></p>
     <p>Office:+1 416 923 4425 ext.{user.extension}</p>
     <p>Fax: +1 877 756 4628</p>
     <p>Email:<a href="mailto:`email`?subject=subject&body=body">{user.email}</a></p>
@@ -65,11 +53,6 @@
     <YoutubeBrand class="h-6 w-6 text-red-500 w-1/8  m-1"/>
   </div>
   
-    
-
-  
-  
- 
  <style>
   .content{
     top:20px;
@@ -97,7 +80,7 @@
     
 
   }
-  .emp-info {
+  .empinfo {
     padding:30px;
   }
   .icons{

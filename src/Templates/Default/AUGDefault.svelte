@@ -2,8 +2,10 @@
    import Employee from "../Employee.svelte";
    import Clipboard from "svelte-clipboard";
    import { writable} from 'svelte/store';
-   import { LinkedinBrand, FacebookBrand,TwitterBrand, YoutubeBrand} from "svelte-awesome-icons";
+  
+ 
    
+	
    //function useState(initValue){
    // let setValue
    // const nameStore = readable(initValue, set => {
@@ -31,15 +33,15 @@
 <Employee/>
  
 <Clipboard
-    text = "<div class ='emp-info'>
+    text = "<div id ='empinfo'>
       <p>{user.fullname}</p>
       <p>{user.designation}</p>
       <p>Office:+1 416 923 4425 ext.{user.extension}</p>
       <p>Fax: +1 877 756 4628</p>
-      <p>Email: <a href="mailto:`email`?subject=subject&body=body">{user.email}</a></p>
-      <a href="https://augsignals.com/">https://augsignals.com/</a>  
+      <p>Email:<a href='mailto:{user.email}'>{user.email}</a></p>
+      <a href='https://augsignals.com/'>https://augsignals.com/</a>  
       </div>
-      <div class = 'footer'>
+      <div id ='footer'>
        <p>
        NOTICE: Confidential message which may be privileged. Unauthorized use/disclosure prohibited. If received in error, please notify the sender immediately and delete all copies and attachments.
        </p>   
@@ -67,17 +69,14 @@
    background-color: transparent; 
    border-color:grey;
   }
-   .emp-info {
+   .empinfo {
     padding:30px;
   }
   
-  p {
+  p{
     display:grid;
     width:350px;
   }
-  .icons{
-    top:0;
-    padding-left:25px;  
-  }
-
+ 
  </style>
+

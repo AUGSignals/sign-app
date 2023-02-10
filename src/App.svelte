@@ -1,11 +1,11 @@
 <script>
   
   import AirSENCEFull from "./Templates/AirSENCEFull/AirSENCE Full.svelte";
-
-
+ 
+ 
 </script>
 
-<AirSENCEFull/> 
+<AirSENCEFull/>
 <main>
 
   
@@ -20,7 +20,6 @@
 </style>
  
 
- 
   
 	
 
