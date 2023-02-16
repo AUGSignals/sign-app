@@ -3,9 +3,6 @@
    import Clipboard from "svelte-clipboard";
    import { writable} from 'svelte/store';
   
- 
-   
-	
    //function useState(initValue){
    // let setValue
    // const nameStore = readable(initValue, set => {
@@ -56,12 +53,12 @@
       
 <style>
 
-  .footer {
+  :global(.footer) {
     color: black;
     font-family:'sans-serif';
     padding:30px;
     display:grid;
-    width:1000px;
+    width:1000px;                                                                                                                                                                                               
     font-size: 12px;
   }
   button {
@@ -69,11 +66,11 @@
    background-color: transparent; 
    border-color:grey;
   }
-   .empinfo {
+   :global(.empinfo) {
     padding:30px;
   }
   
-  p{
+  :global(.p){
     display:grid;
     width:350px;
   }
