@@ -1,9 +1,8 @@
 
 <script>
-  import { writable} from 'svelte/store';
-  
   import { LinkedinBrand, FacebookBrand,TwitterBrand, YoutubeBrand} from "svelte-awesome-icons";
-    const user = writable({
+ 
+  export const user = ({
     fullname: "",
     designation:"",
     extension:"",
@@ -28,14 +27,14 @@
     <input type = "text" placeholder="Enter Email" id= "email" bind:value={user.email} required="true"/>
   
   
-  <button type="primary">Submit</button>
+  
 
  
 
 </form>
 <div id = 'empinfo'>
   <p><strong>{user.fullname}</strong></p>
-  <p>{user.designation}</p>
+  <p><strong>{user.designation}</strong></p>
   <p>Office:+1 416 923 4425 ext. {user.extension}</p>
   <p>Fax: +1 877 756 4628</p>
   <p>Email:<a href='mailto:{user.email}'>{user.email}</a></p>
@@ -62,15 +61,6 @@
   
 
 }
-button {
-  width:100px;
-  align-items: center;
-  background-color:rgb(3, 154, 214);
-  border-color:transparent ;
-  color:white;
-  font-weight:20px;
-}
-
 
 .icons{
   top:0;
@@ -81,4 +71,3 @@ button {
   padding:30px;
 }
 </style>
-

@@ -1,7 +1,7 @@
 <script>
   import Employee from "../Employee.svelte";
   import  Clipboard from "svelte-clipboard"; 
-  import { writable} from 'svelte/store';
+  import { writable } from 'svelte/store';
  
    const user = writable({
     fullname: " ",
@@ -9,8 +9,10 @@
     extension:" ",
     email: " "
   });
+  
 </script>
-<Employee/>       
+ 
+<Employee {...user}/>     
 <div id = 'flex-grid'>
   <h3>
       Canada Address
@@ -31,7 +33,7 @@ NOTICE: Confidential message which may be privileged. Unauthorized use/disclosur
 </p>
 </div>
   <!-- copied text to clipboard-->
-   <Clipboard 
+<Clipboard 
     text="<div id = 'empinfo'>
       <p><strong>{user.fullname}</strong></p>
       <p><strong>{user.designation}</strong></p>
@@ -64,16 +66,16 @@ NOTICE: Confidential message which may be privileged. Unauthorized use/disclosur
      on:copy={() => {
       alert('Copied to Clipboard👏');
      }}>
-     <button on:click={copy}>Copy to clipboard</button>
+     <button on:click={copy}>Copy </button>
   </Clipboard>
- 
-
+  
 <style>
-  :global(.flex-grid){
-    width:400px;
-    padding-left:20px;
+    :global(.flex-grid){
+    width:600px;
+    gap: 10px;
+    padding-left:10px;
     font-family:'Segoe UI';
-    font-size: 13px;
+    font-size: 12px;
      }
   :global(.footer ){ 
     font-family:'Segoe UI';
@@ -92,3 +94,4 @@ NOTICE: Confidential message which may be privileged. Unauthorized use/disclosur
 }
 
 </style>
+
