@@ -1,7 +1,7 @@
 <script>
    import Employee from "../Employee.svelte";
    import Clipboard from "svelte-clipboard";
-   import { writable} from 'svelte/store';
+  
   
    //function useState(initValue){
    // let setValue
@@ -27,8 +27,14 @@
     });  
     
 </script>
-<Employee/>
- 
+<Employee {...user}/>
+
+<img src= "https://augsignals.com/wp-content/uploads/logo/aug-logo-200x110.jpg" classname="logo" alt='auglogo' height='350px' width='200px'/>
+<div id ='footer'>
+  <p>
+  NOTICE: Confidential message which may be privileged. Unauthorized use/disclosure prohibited. If received in error, please notify the sender immediately and delete all copies and attachments.
+  </p>   
+ </div>       
 <Clipboard
     text = "<div id ='empinfo'>
       <p>{user.fullname}</p>
@@ -38,6 +44,7 @@
       <p>Email:<a href='mailto:{user.email}'>{user.email}</a></p>
       <a href='https://augsignals.com/'>https://augsignals.com/</a>  
       </div>
+      <img src= 'https://augsignals.com/wp-content/uploads/logo/aug-logo-200x110.jpg' classname='logo' alt='auglogo' height='350px' width='200px'/>
       <div id ='footer'>
        <p>
        NOTICE: Confidential message which may be privileged. Unauthorized use/disclosure prohibited. If received in error, please notify the sender immediately and delete all copies and attachments.
@@ -64,7 +71,7 @@
   button {
    margin-left:30px;
    background-color: transparent; 
-   border-color:grey;
+   color:#1890ff;
   }
    :global(.empinfo) {
     padding:30px;

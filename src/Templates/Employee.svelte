@@ -1,37 +1,30 @@
 
 <script>
   import { LinkedinBrand, FacebookBrand,TwitterBrand, YoutubeBrand} from "svelte-awesome-icons";
- 
-  export const user = ({
+  export const user =({
     fullname: "",
     designation:"",
     extension:"",
-    email: ""
+    email:  ""
   });
-
+   
 </script>
 
-
-<form class ="content" >
+<form class ="content"  >
  
     <label for="fullname">Full Name</label>
     <input type = "text" placeholder="Enter Full name" id="fullname" bind:value={user.fullname} required="true"/>
  
     <label for="designation">Designation</label>
-    <input type = "text" placeholder="Enter Designation" id="designation" bind:value={user.designation} required="true" />
+    <input type = "text" placeholder="Enter Designation" id="designation" bind:value={user.designation} required="true"  />
   
     <label for="extension">Extension</label>
     <input type = "text" placeholder="Enter Extension"  id="extension" bind:value={user.extension} required="true"/>
 
     <label for="email">Email</label>
     <input type = "text" placeholder="Enter Email" id= "email" bind:value={user.email} required="true"/>
-  
-  
-  
-
- 
-
 </form>
+
 <div id = 'empinfo'>
   <p><strong>{user.fullname}</strong></p>
   <p><strong>{user.designation}</strong></p>
@@ -54,11 +47,11 @@
   display:grid;
   width:280px;
   align-items:center;
-  grid-row-gap: 5px;
+  grid-row-gap: 8px;
   border-radius: 0ch;
-  font-size: 1.1em;
+  font-size: 1em;
   margin-top:30px;
-  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 }
 
@@ -69,5 +62,8 @@
 }
 :global(.empinfo) {
   padding:30px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 </style>
+
+
