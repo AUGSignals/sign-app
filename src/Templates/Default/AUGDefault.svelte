@@ -1,24 +1,6 @@
 <script>
    import Employee from "../Employee.svelte";
    import Clipboard from "svelte-clipboard";
-  
-  
-   //function useState(initValue){
-   // let setValue
-   // const nameStore = readable(initValue, set => {
-	 //   setValue = set
-   // })
-   // nameStore.subscribe(value=>{})
-   // return [nameStore,setValue]
-//}
- 
-  // function copyToClipboard(element) {
-  //var $temp = ("<input>");
-  //("body").append($temp);
-  //$temp.val((element).text()).select();
-  //document.execCommand("copy");
-  //$temp.remove();
-  //}
   const user = writable({
       fullname: { },
       designation:{ },

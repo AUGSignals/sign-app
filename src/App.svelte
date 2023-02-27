@@ -1,22 +1,20 @@
 <script>
-  
-  import AirSENCEFull from "./Templates/AirSENCEFull/AirSENCE Full.svelte";
- 
- 
+
+  import Layout from "./Templates/Layout.svelte";
+
 </script>
 
 
 <main>
-  <AirSENCEFull/>
-  
+  <Layout />
 </main>
 <style>
   
-   
   @media (min-width:900px) {
     main { max-width:none;
     }
   }
+ 
 </style>
  
 

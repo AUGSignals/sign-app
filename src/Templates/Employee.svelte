@@ -1,13 +1,13 @@
 
 <script>
   import { LinkedinBrand, FacebookBrand,TwitterBrand, YoutubeBrand} from "svelte-awesome-icons";
-  export const user =({
+  export let user =({
     fullname: "",
     designation:"",
     extension:"",
     email:  ""
   });
-   
+ 
 </script>
 
 <form class ="content"  >
@@ -26,12 +26,14 @@
 </form>
 
 <div id = 'empinfo'>
+  
   <p><strong>{user.fullname}</strong></p>
   <p><strong>{user.designation}</strong></p>
   <p>Office:+1 416 923 4425 ext. {user.extension}</p>
   <p>Fax: +1 877 756 4628</p>
   <p>Email:<a href='mailto:{user.email}'>{user.email}</a></p>
   <a href='https://airsence.com/'>https://airsence.com/</a> 
+  
     </div>
 <div class="icons" >
                 
